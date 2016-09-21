@@ -1,9 +1,9 @@
 ---
 applications:
-- name: azure-resources
-  memory: 512M
-  instances: 1
+- name: resources
+  memory: 1024M
+  instances: 2
   path: .
   command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
   services:
-    - azure_resources_dev
+    - resources_dev

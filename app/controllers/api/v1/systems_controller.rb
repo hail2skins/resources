@@ -42,16 +42,22 @@ module Api
   
       # PATCH/PUT /systems/1
       def update
-        if @system.update(system_params)
-          render json: @system
-        else
-          render json: @system.errors, status: :unprocessable_entity
+        respond_to do |format|
+          if @system.update(system_params)
+            format.json { render :show, status: :ok, location: @system }
+          else
+            format.json { render json: @system.errors, status: :unprocessable_entity }
+          end
         end
       end
     
       # DELETE /systems/1
       def destroy
         @system.destroy
+        respond_to do |format|
+          format.html { redirect_to systems_url, notice: 'System was successfully destroyed.' }
+          format.json { head :no_content }
+        end
       end
     
       private

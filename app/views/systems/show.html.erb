@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @system.name %>
+</p>
+
+<p>
+  <strong>Resource group:</strong>
+  <%= @system.resource_group %>
+</p>
+
+<p>
+  <strong>Availability set:</strong>
+  <%= @system.availability_set %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @system.operating_system %>
+</p>
+
+<p>
+  <strong>Vm size:</strong>
+  <%= @system.vm_size %>
+</p>
+
+<p>
+  <strong>Operating system version:</strong>
+  <%= @system.operating_system_version %>
+</p>
+
+<p>
+  <strong>Storage:</strong>
+  <%= @system.storage %>
+</p>
+
+<p>
+  <strong>Subnet:</strong>
+  <%= @system.subnet %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @system.ip %>
+</p>
+
+<p>
+  <strong>Nsg:</strong>
+  <%= @system.nsg %>
+</p>
+
+<p>
+  <strong>Nsg resource group:</strong>
+  <%= @system.nsg_resource_group %>
+</p>
+
+<%= link_to 'Edit', edit_system_path(@system) %> |
+<%= link_to 'Back', systems_path %>

@@ -1,0 +1,72 @@
+<%= form_for(system) do |f| %>
+  <% if system.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(system.errors.count, "error") %> prohibited this system from being saved:</h2>
+
+      <ul>
+      <% system.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resource_group %>
+    <%= f.text_field :resource_group %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availability_set %>
+    <%= f.text_field :availability_set %>
+  </div>
+
+  <div class="field">
+    <%= f.label :operating_system %>
+    <%= f.text_field :operating_system %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vm_size %>
+    <%= f.text_field :vm_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :operating_system_version %>
+    <%= f.text_field :operating_system_version %>
+  </div>
+
+  <div class="field">
+    <%= f.label :storage %>
+    <%= f.text_field :storage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subnet %>
+    <%= f.text_field :subnet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ip %>
+    <%= f.text_field :ip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nsg %>
+    <%= f.text_field :nsg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nsg_resource_group %>
+    <%= f.text_field :nsg_resource_group %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

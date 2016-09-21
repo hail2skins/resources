@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  resource_group: MyString
+  availability_set: MyString
+  operating_system: MyString
+  vm_size: MyString
+  operating_system_version: MyString
+  storage: MyString
+  subnet: MyString
+  ip: MyString
+  nsg: MyString
+  nsg_resource_group: MyString
+
+two:
+  name: MyString
+  resource_group: MyString
+  availability_set: MyString
+  operating_system: MyString
+  vm_size: MyString
+  operating_system_version: MyString
+  storage: MyString
+  subnet: MyString
+  ip: MyString
+  nsg: MyString
+  nsg_resource_group: MyString

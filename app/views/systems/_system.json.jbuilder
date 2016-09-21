@@ -1,0 +1,2 @@
+json.extract! system, :id, :name, :resource_group, :availability_set, :operating_system, :vm_size, :operating_system_version, :storage, :subnet, :ip, :nsg, :nsg_resource_group, :created_at, :updated_at
+json.url system_url(system, format: :json)

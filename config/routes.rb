@@ -2,6 +2,8 @@ require 'api_version'
 
 Rails.application.routes.draw do
 
+  root 'welcome#home'
+
   scope defaults: { format: 'json' } do
     namespace :api do
       scope module: :v1, constraints: ApiVersion.new('v1', true) do

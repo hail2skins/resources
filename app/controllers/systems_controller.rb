@@ -4,7 +4,7 @@ class SystemsController < ApplicationController
   # GET /systems
   # GET /systems.json
   def index
-    @systems = System.all
+    @systems = System.page params[:page]
   end
 
   # GET /systems/1

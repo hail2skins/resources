@@ -4,7 +4,10 @@ class SystemsController < ApplicationController
   # GET /systems
   # GET /systems.json
   def index
-    @systems = System.page params[:page]
+    @q = System.ransack(params[:q])
+    @q.sorts = 'name asc' if @q.sorts.empty?
+    @systems = @q.result.page(params[:page])
+  	@q.build_condition
   end
 
   # GET /systems/1

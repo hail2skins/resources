@@ -2,22 +2,30 @@
 
 <h1>Systems</h1>
 
+      <%= search_form_for @q do |f| %>
+        <%= f.condition_fields do |c| %>
+          <%= render "condition_fields", f: c %>  
+        <% end %>
+        <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>   
+        <%= f.submit "Search", class: 'btn btn-primary' %>
+      <% end %>
+
 <%= paginate @systems %>
 <table class="table table-striped">
   <thead class="thead-inverse">
     <tr>
-      <th>Name</th>
-      <th>Resource Group</th>
-      <th>Location</th>
-      <th>Availability Set</th>
-      <th>OS</th>
-      <th>VM Size</th>
-      <th>OS Version</th>
-      <th>Storage</th>
-      <th>Subnet</th>
-      <th>IP</th>
-      <th>NSG</th>
-      <th>NSG Resource Group</th>
+      <th><%= sort_link(@q, :name) %></th>
+      <th><%= sort_link(@q, :resource_group, "Resouce Group") %></th>
+      <th><%= sort_link(@q, :location) %></th>
+      <th><%= sort_link(@q, :availability_set, "Availability Set") %></th>
+      <th><%= sort_link(@q, :operating_system, "OS") %></th>
+      <th><%= sort_link(@q, :vm_size, "VM Size") %></th>
+      <th><%= sort_link(@q, :operating_system_version, "OS Version") %></th>
+      <th><%= sort_link(@q, :storage) %></th>
+      <th><%= sort_link(@q, :subnet) %></th>
+      <th><%= sort_link(@q, :ip, "IP") %></th>
+      <th><%= sort_link(@q, :nsg, "NSG") %></th>
+      <th><%= sort_link(@q, :nsg_resource_group, "NSG Resource Group") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

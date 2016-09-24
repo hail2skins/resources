@@ -2,13 +2,13 @@
 
 <h1>Systems</h1>
 
-      <%= search_form_for @q do |f| %>
-        <%= f.condition_fields do |c| %>
-          <%= render "condition_fields", f: c %>  
-        <% end %>
-        <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>   
-        <%= f.submit "Search", class: 'btn btn-primary' %>
-      <% end %>
+<%= search_form_for @q do |f| %>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c %>  
+  <% end %>
+  <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>   
+  <%= f.submit "Search", class: 'btn btn-primary' %>
+<% end %>
 
 <%= paginate @systems %>
 <table class="table table-striped">

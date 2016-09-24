@@ -60,3 +60,17 @@ end
 gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
+  gem 'capybara-webkit'
+  gem 'capybara'
+  gem 'minitest-reporters'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'policy-assertions'
+end
+
+gem 'devise'

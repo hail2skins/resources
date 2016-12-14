@@ -57,9 +57,9 @@ end
 
 #gem 'will_paginate', '~> 3.1.0'
 
-gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
+gem 'kaminari'
 
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
